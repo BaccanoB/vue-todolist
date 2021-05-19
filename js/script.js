@@ -30,9 +30,6 @@ var app = new Vue (
                     completed:false
                 }
             ],
-            listStyle:{
-                style:"none_style"
-            }
         },
         methods:{
             removeItem: function (index) {
@@ -49,11 +46,6 @@ var app = new Vue (
             completedChange: function (item) {
                 item.completed = !item.completed;
                 console.log(item.completed);
-                if(item.completed == true){
-                    this.listStyle.style = "line_style"
-                }else {
-                    this.listStyle.style = "none_style"
-                }
             },
         }
     }
