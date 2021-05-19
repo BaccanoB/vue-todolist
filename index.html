@@ -20,9 +20,8 @@
             </div>
             <ul>
                 <li v-for="(toDo,index) in toDoList"
-                @click="completedChange(toDo)"
                 :class="(toDo.completed == true)?'line_style' : ''">
-                    {{ toDo.text }}
+                    <span @click="completedChange(toDo)">{{ toDo.text }}</span>
                     <i class="far fa-calendar-times"
                     @click="removeItem(index)"></i>
                 </li>
